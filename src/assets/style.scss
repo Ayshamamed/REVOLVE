@@ -1,0 +1,143 @@
+@import "_Slider.scss";
+@import "_Section.scss";
+@import "_SingleCard.scss";
+@import "_SectionOne.scss";
+@import "_SectionThree.scss";
+@import "_SectionTwo";
+@import "_AboutPage.scss";
+@import "_Login.scss";
+
+*{
+  
+    font-family: 'Ysabeau Office', sans-serif;
+    padding: 0;
+    margin: 0;
+    // background-color: #E9E8DE;
+    .img_flag{
+        width: 20px;
+        height: 20px;
+        border-radius: 70%;
+        .img-en-azn{
+            font-weight: 10px;
+        }
+    }
+  #revolve-middle-brand{
+    margin-right: 140px;
+    font-size: 4rem;
+    // color: linear-gradient(to left bottom, #e5feff, #d0f5f8, #bbedf1, #a6e4ea, #8fdbe4) !important;
+
+  }
+  
+  
+  // .login-div, .shop-div, .heart-div{
+  //   width: 50px;
+  //   height: 50px;
+  //   align-items: center;
+  //   justify-content: center;
+    
+  //   background-color: rgb(228, 228, 228);
+  //   border-radius: 10px;
+  //   .login {
+  //     margin-top: 10px;
+  //     margin-left: 10px;
+  //   }
+  //   .shop{
+  //     margin-top: 12px;
+  //     margin-left: 11px;
+  //   }
+  //   .heart{
+  //     margin-top: 11px;
+  //     margin-left: 11px;
+  //   }
+  // }
+
+  
+  
+
+  .footers{
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    font-size: 20px;
+    font-weight: 100;
+
+    .icons, .icons-link{
+      font-size: x-large;
+      color: whitesmoke;
+      display: flex;
+      position: relative;
+
+    }
+    
+    .icons-link{
+      background-color: #fff;
+      width: 40px;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: black;
+      &:hover{
+        background: #000000;
+        color: #fff;
+      }
+    }
+  
+    
+    .card-img{
+      width: 430px;
+    }
+  }
+  .footers-end{
+    background-color: #000000;
+    font-size: 17px;
+  }
+ 
+    //  LOGIN COMPONENT
+  .signIn-button, .signUp-button{
+    width: 100%;
+    height: 60px;
+    color: #000000;
+  }
+  .signIn-button:hover{
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    color: #000000;
+  }
+  // .nav-two{
+  //   width: 100%;
+  //   height: 70px !important;
+  // }
+  // .nav-two:hover{
+    
+  //   background-color: #fff;
+    
+  // }
+  //   .forms{
+  //     background-color:#fff ;
+  //     border-radius: 43px;
+  //   }
+
+   
+  //  color: #FCD468;
+    #nav-button{
+      background-color: #fff;
+    }
+ 
+    //  .navs{
+    //   background-image: url("../images/slider.png");
+    //   background-size: cover;
+      
+    //   height: 400px;
+    //   width: 100%;
+     
+   
+     
+
+
+    //  }
+ 
+  
+
+  }

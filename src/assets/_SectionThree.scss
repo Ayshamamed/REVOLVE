@@ -1,0 +1,84 @@
+
+
+.main{
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.card-filter{
+    &:hover{
+        .img-filter {
+            display: none;
+        }
+        .img1-filter {
+            display: block;
+            
+        }
+        
+        
+    }
+    .img1-filter{
+        display: none;
+        border-radius: 7px;
+    }
+    .img-filter{
+        border-radius: 7px;
+    }
+  }
+//   .hover-icons{
+    
+//     width: 100%;
+//     height: 20%;
+//     padding: 12rem   ;
+ 
+//     margin-top: -500px;
+    
+//     display: flex;
+//     justify-content: space-around;
+//     flex-direction: column;
+//     color: beige;
+//     overflow: hidden;
+//     transition: 0.7s;
+//   }
+  
+.have{
+    color: #040415;
+    font-size: 46px;
+}
+.product{
+    color: darkblue !important;
+   
+}
+.filter-button{
+
+  
+    background-color: antiquewhite !important;
+    
+
+
+}
+.price-initial{
+    color: #961C1C;
+}
+
+.price-endirim{
+    font-size: small;
+}
+.stars{
+    color: rgba(255, 171, 44, 0.916);
+    font-size: xx-small;
+}
+.splide__slide{
+    border: none !important;
+    .main{
+        transition: 0s ease;
+        opacity: .3;
+    }
+    &.is-active{
+        .main{
+            opacity: 1;
+        }
+    }
+   
+}

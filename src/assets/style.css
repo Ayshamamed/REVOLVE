@@ -1,0 +1,358 @@
+#app {
+  height: 100%;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 600px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.navitimer {
+  width: 540px;
+  color: #eee;
+  font-size: 10px;
+  margin-top: 220px !important;
+}
+
+.shopnow {
+  margin-bottom: 90px !important;
+}
+
+.swiper2 .navitimer {
+  color: #eee;
+}
+.swiper2 .navitimer:hover {
+  color: white;
+}
+
+.product {
+  width: 200px;
+  height: 40px;
+  margin-top: 480px;
+  margin-left: -28px !important;
+  color: #6A829E !important;
+  font-weight: 900 !important;
+}
+.product:hover {
+  background-color: #7F90AE !important;
+  color: #eee !important;
+}
+
+.slider3-btn {
+  width: 200px;
+  height: 40px;
+  margin-top: 320px;
+  margin-left: -190px;
+  color: #9784AC !important;
+  font-weight: 900 !important;
+}
+.slider3-btn:hover {
+  color: #DBC9CF !important;
+  background-color: #eee !important;
+}
+
+.slider4-btn {
+  width: 200px;
+  height: 40px;
+  margin-top: 330px;
+  margin-left: -380px;
+  color: #000 !important;
+  font-weight: 900 !important;
+}
+.slider4-btn:hover {
+  color: white !important;
+  background-color: rgb(72, 50, 25) !important;
+}
+
+.section .our-mission {
+  font-size: 30px;
+}
+.section .section-body {
+  font-size: 2.7rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  position: relative;
+}
+* .offer-single {
+  margin-bottom: -30px;
+  font-size: 25px;
+}
+* .category-single {
+  font-size: 65px;
+}
+* .main-singlecard {
+  display: block;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.7));
+  overflow: hidden;
+  border-radius: 0.6rem;
+  transition: 0.2s;
+  position: relative;
+}
+* .main-singlecard .card-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  padding: 2.2rem 8;
+  color: beige;
+  overflow: hidden;
+  transition: 0.7s;
+}
+* .main-singlecard .card-overlay:hover {
+  height: 100%;
+  transition: 0.2s;
+  background-size: cover;
+}
+* .main-singlecard .card-overlay .quick {
+  color: beige;
+}
+* .main-singlecard .card-overlay .icons-single {
+  padding: 9rem;
+  margin-left: -118px;
+}
+* .main-singlecard .card-overlay .shop-single,
+* .main-singlecard .card-overlay .heart-single,
+* .main-singlecard .card-overlay .search-single {
+  color: beige;
+}
+* .main-singlecard .card-overlay .shop-single:hover,
+* .main-singlecard .card-overlay .heart-single:hover,
+* .main-singlecard .card-overlay .search-single:hover {
+  color: black;
+}
+* .main-singlecard .img-single {
+  display: none;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.sectione-text {
+  color: #87C0DF;
+  font-weight: bolder;
+}
+
+.section-one-cards {
+  border-top-left-radius: 45px;
+}
+.section-one-cards .delivery, .section-one-cards .tel, .section-one-cards .arrow {
+  margin-top: 27px;
+  width: 33px;
+  font-weight: bold;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card-filter:hover .img-filter {
+  display: none;
+}
+.card-filter:hover .img1-filter {
+  display: block;
+}
+.card-filter .img1-filter {
+  display: none;
+  border-radius: 7px;
+}
+.card-filter .img-filter {
+  border-radius: 7px;
+}
+
+.have {
+  color: #040415;
+  font-size: 46px;
+}
+
+.product {
+  color: darkblue !important;
+}
+
+.filter-button {
+  background-color: antiquewhite !important;
+}
+
+.price-initial {
+  color: #961C1C;
+}
+
+.price-endirim {
+  font-size: small;
+}
+
+.stars {
+  color: rgba(255, 171, 44, 0.916);
+  font-size: xx-small;
+}
+
+.splide__slide {
+  border: none !important;
+}
+.splide__slide .main {
+  transition: 0s ease;
+  opacity: 0.3;
+}
+.splide__slide.is-active .main {
+  opacity: 1;
+}
+
+.abouts {
+  box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+  height: 500px !important;
+}
+.abouts .abouts-text2 {
+  margin-top: 90px;
+}
+
+.image-about {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background-image: url("../images/abouts.png");
+  overflow: hidden;
+  background-size: cover;
+  box-shadow: 0 0 10px #000;
+}
+.image-about .about-navs {
+  height: 500px;
+  position: absolute;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.6;
+}
+.image-about .home-about {
+  color: aliceblue;
+}
+.image-about .home-about:hover {
+  color: #000000;
+}
+
+.aboutPage {
+  width: 530px;
+  height: 720px;
+}
+
+.abouts-a {
+  text-decoration: none;
+}
+
+.about-icons {
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-icons:hover {
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.breadcrumb {
+  font-weight: 800;
+  font-size: 26px !important;
+  margin-top: 250px;
+  margin-left: 620px;
+}
+
+* {
+  font-family: "Ysabeau Office", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+* .img_flag {
+  width: 20px;
+  height: 20px;
+  border-radius: 70%;
+}
+* .img_flag .img-en-azn {
+  font-weight: 10px;
+}
+* #revolve-middle-brand {
+  margin-right: 140px;
+  font-size: 4rem;
+}
+* .footers {
+  width: 100%;
+  height: auto;
+  background-color: #000000;
+  font-size: 20px;
+  font-weight: 100;
+}
+* .footers .icons, * .footers .icons-link {
+  font-size: x-large;
+  color: whitesmoke;
+  display: flex;
+  position: relative;
+}
+* .footers .icons-link {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: black;
+}
+* .footers .icons-link:hover {
+  background: #000000;
+  color: #fff;
+}
+* .footers .card-img {
+  width: 430px;
+}
+* .footers-end {
+  background-color: #000000;
+  font-size: 17px;
+}
+* .signIn-button, * .signUp-button {
+  width: 100%;
+  height: 60px;
+  color: #000000;
+}
+* .signIn-button:hover {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  color: #000000;
+}
+* #nav-button {
+  background-color: #fff;
+}/*# sourceMappingURL=style.css.map */
