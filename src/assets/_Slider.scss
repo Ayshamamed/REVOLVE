@@ -8,6 +8,7 @@
     }
 
     body {
+      overflow-x:hidden;
       background: #eee;
       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
       color: #000;
@@ -50,12 +51,48 @@
       }
   }
 
+  .slider1-btn{
+    width: 200px;
+    height: 40px;
+    margin-top: 354px ;
+    margin-left: -620px;
+    color:  #000 !important;
+    font-weight: 900 !important;
+    &:hover{
+      color: white !important;
+      background-color: rgb(25, 72, 41) !important;
+    }
+  }
+  .slider2-btn{
+    width: 200px;
+    height: 40px;
+    margin-top: 300px ;
+    margin-left: 110px;
+    color:  #000 !important;
+    font-weight: 900 !important;
+    &:hover{
+      color: white !important;
+      background-color: rgb(25, 72, 41) !important;
+    }
+  }
+  .slider6-btn{
+    width: 200px;
+    height: 40px;
+    margin-top: 350px ;
+    margin-left: -40px;
+    color:  #000 !important;
+    font-weight: 900 !important;
+    &:hover{
+      color: white !important;
+      background-color: rgb(25, 72, 41) !important;
+    }
+  }
 
   .product{
     width: 200px;
     height: 40px;
     margin-top: 480px;
-    margin-left: -28px !important; 
+    margin-left: -1080px !important; 
     color: #6A829E !important;
     font-weight: 900 !important;
     &:hover{
@@ -83,7 +120,7 @@
     width: 200px;
     height: 40px;
     margin-top: 330px ;
-    margin-left: -380px;
+    margin-left: -400px;
     color:  #000 !important;
     font-weight: 900 !important;
     &:hover{
@@ -91,3 +128,13 @@
       background-color: rgb(72, 50, 25) !important;
     }
   }
+  .swiper-button-next, .swiper-button-prev{
+    display: flex;
+    align-items: center;
+    color: #fff !important;
+    width: 60px !important;
+    height:60px  !important;
+    border-radius: 50% !important;
+    background-color: #EBEAE5 !important;
+  }
+ 

@@ -1,0 +1,148 @@
+.image-contact-us{
+    height: 500px;
+    background-image: url('../layihenin shekilleri/cosmetics/d.png');
+    overflow: hidden;
+    background-size: cover;
+    box-shadow: 0 0 10px #000;
+    width: 100%;
+    
+
+}
+
+.cotactUs-navs{
+    height: 500px;
+    position: absolute;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.6;
+    margin-left: -13px;
+
+    
+  }
+  .breadcrumb{
+    font-weight: 800;
+    font-size: 26px !important;
+    margin-top: 250px;
+    margin-left: 490px !important;
+  }
+
+
+  // Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Lusitana:400,700);
+
+
+
+
+// Grid
+.row {
+   .col {
+      float: left;
+      box-sizing: border-box;
+      &.x-50 {
+         width: 50%;
+      }
+      &.x-100 {
+         width: 100%;
+      }
+   }
+}
+
+
+
+.get-in-touch {
+   max-width: 700px;
+   margin: 0 auto;
+   position: relative;
+   margin-top: 200px;
+   transform: translateY(-50%);
+   margin-bottom: -230px;
+  
+  .get-title {
+     text-align: center;
+     font-family: Raleway, sans-serif;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     font-size: 36px;
+     font-weight: 700 ;
+     line-height: 48px;
+     padding-bottom: 48px;
+  }
+}
+
+.contact-form {
+   .form-field {
+      position: relative;
+      margin: 32px 0;
+   }
+   .input-text1, .input-text2, .input-text3, .input-text4 {
+      display: block;
+      height: 36px;
+      border-width: 0 0 2px 0;
+      border-color: #000;
+      font-family: Lusitana, serif;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+
+      
+      &:focus {
+         outline: none;
+      }
+      
+      &:focus,
+      &.not-empty {
+         + .label {
+            transform: translateY(-24px);
+         }
+      }
+   }
+   .input-text1, .input-text2{
+      width: 100%;
+   }
+   .input-text3, .input-text4{
+      width: 700px;
+   }
+   
+
+   .label {
+      position: absolute;
+      left: 20px;
+      bottom: 11px;
+      font-family: Lusitana, serif;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      cursor: text;
+      transition: transform .2s ease-in-out;
+      .mail-contact{
+         margin-bottom: 10px;
+      }
+   }
+   
+   .submit-btn {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      font-family: Raleway, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 19px;
+      line-height: 24px;
+      padding: 10px 60px;
+      border: none;
+   }
+}
+
+.note {
+   position: absolute;
+   left: 0;
+   bottom: 10px;
+   width: 100%;
+   text-align: center;
+   font-family: Lusitana, serif;
+   font-size: 16px;
+   line-height: 21px;
+   
+   
+}

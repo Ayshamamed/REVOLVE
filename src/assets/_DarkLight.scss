@@ -1,0 +1,82 @@
+.dark{
+    --bgColor: #010409;
+    --color: #E6EDF3;
+    --bgColor-nav-buttons: #0D1117;
+    --bgColor-icon-button:#12161e;
+    --bgColor-category-button:#0f151e;
+
+    
+
+}
+.light{
+    --bgColor: #ffffff;
+    --color: black;
+    --bgColor-nav-buttons: black;
+    --bgColor-icon-button:#F8F9FA;
+    --bgColor-category-button:#ebeef1;
+
+
+
+}
+
+
+
+.home-page, .langLink-nav{
+ background-color: var(--bgColor);
+ color: var(--color);
+}
+.navbar-page{
+background-color: var(--bgColor);
+color: var(--color);
+
+}
+.langBtn-nav,.lang-drop{
+color: var(--color);
+}
+.navbar-info{
+    color: var(--color);
+}
+.toggle{
+    background-color: var(--bgColor-nav-buttons) !important;
+    color: var(--color);
+}
+.fav-btn, .shop-btn, .login-btn{
+    background-color: var(--bgColor-nav-buttons);
+  
+}
+.nav-fwrd, .nav-revolve, .navbar-info, .help, .women, .men, .revolve-middle {
+    color: var(--color) !important;
+}
+
+.shop, .heart,  .search-icon, .filter, .have, .login{
+    
+    color: var(--color);
+}
+.header-input{
+    background-color: var(--bgColor-icon-button);
+    }
+    .nav-button{
+        background-color: var(--bgColor-nav-buttons);
+        color: var(--color);
+    }
+
+    .nav-third{
+        color: var(--color) !important;
+    }
+    .filter{
+        color: var(--color) !important;
+    }
+    .filter-button{
+        background-color: var(--bgColor-category-button) !important;
+    }
+    .top-btn{
+        background-color: var(--bgColor-icon-button) !important;
+        .scroll{
+        color: var(--color);
+            
+        }
+    }
+.splidejs{
+ background-color: var(--bgColor) !important;
+ border-radius: 37px;
+}

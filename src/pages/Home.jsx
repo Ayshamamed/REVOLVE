@@ -1,21 +1,23 @@
 import React from 'react';
-
-import SectionOne from '../components/SectionOne';
-import Slider from '../components/Slider';
-import Section from '../components/Section';
-import SectionTwo from '../components/SectionTwo';
-import SectionThree from '../components/SectionThree';
-import CardList from '../components/CardList';
+import Slider from '../HOME/Slider';
+import Section from '../HOME/Section';
+import SectionTwo from '../HOME/SectionTwo';
+import SectionThree from '../HOME/SectionThree';
+import CardList from '../HOME/CardList';
+import CustomerSays from '../HOME/CustomerSays';
+import Statistics from '../HOME/Statistics';
 
 const Home = () => {
   return (
-    <div>
+    <div className='home-page'>
+      
         <Slider/>
         <CardList/>
         <Section/>
         <SectionTwo/>
         <SectionThree/>
-        <SectionOne/>
+        <Statistics/>
+        <CustomerSays/>
 
     </div>
   )

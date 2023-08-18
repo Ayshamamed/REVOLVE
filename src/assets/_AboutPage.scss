@@ -1,18 +1,21 @@
 
 .image-about{
-  width: 100%;
+
   height: 500px;
   position: relative;
- background-image: url('../images/abouts.png');
- overflow: hidden;
+  background-image: url('../images/abouts.png');
+  overflow: hidden;
   background-size: cover;
   box-shadow: 0 0 10px #000;
+  width: 100%;
+
   .about-navs{
     height: 500px;
     position: absolute;
     width: 100%;
     background-color: #000000;
-    opacity: 0.6
+    opacity: 0.6;
+    margin-left: -13px;
   }
  .home-about{
   color: aliceblue ;
@@ -22,7 +25,6 @@
  }
 
 }
-
 .aboutPage{
      width: 530px;
      height: 720px;
@@ -45,12 +47,22 @@
     &:hover{
         color: black;
         background-color: white;
-        border:  2px solid black;
+        border:  2px solid black ;
     }
    }
 .breadcrumb{
   font-weight: 800;
   font-size: 26px !important;
   margin-top: 250px;
-  margin-left: 620px;
+  margin-left: 520px !important;
+}
+
+.long-text{
+  height: 0;
+  overflow:hidden ;
+  display: inline-block;
+  transition:  1s;
+}
+.expanded{
+  height: 26rem;
 }
