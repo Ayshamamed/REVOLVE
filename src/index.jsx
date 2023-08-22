@@ -10,7 +10,7 @@ import { WishlistProvider } from 'react-use-wishlist';
 import { CartProvider } from 'react-use-cart';
 import {  ModeProvider } from './context/ModeContext';
 import { Provider } from 'react-redux';
-import store from './REDUX/store/Store';
+import { store } from './REDUX/Store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -36,9 +36,9 @@ const Wishlist = () => {
           myArray.map((item, count) => {
             return  <Col sm={6} md={3}  >
             <div className='main mb-5 ' style={{width:"100%", height:"100%"}}>
-                <div className="card-filter border-0 " height={300} >
-                    <img src={item.img} width={200} height={300} className="img-filter card-img-top" alt="/" />
-                    <img src={item.img1} width={200 } height={300} className="img1-filter card-img-top" alt="/" />
+                <div className="card-filter border-0 "  >
+                    <img src={item.img} width={200}  className="img-filter card-img-top" alt="/" />
+                    <img src={item.img1} width={200 }  className="img1-filter card-img-top" alt="/" />
                 </div>
                 <div className="card-body " height={300}>
 

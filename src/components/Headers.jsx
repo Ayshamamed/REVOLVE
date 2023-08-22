@@ -16,9 +16,11 @@ import product from "../data/FiltersProduct";
 import { useContext, useEffect, useState } from 'react';
 import { useWishlist } from 'react-use-wishlist';
 import { ModeContext } from '../context/ModeContext';
+import { useNavigate } from 'react-router-dom';
 
 
 const Headers = () => {
+  const location =useNavigate();
   const { isWishlistEmpty, totalWishlistItems, inWishlist, } = useWishlist();
 
   const { items, updateItemQuantity, removeItem, cartTotal, emptyCart, isEmpty } = useCart();
@@ -26,11 +28,13 @@ const Headers = () => {
   const { totalItems } = useCart();
   const { darkMode, setDarkMode, toggleBtn } = useContext(ModeContext);
   const [query, setQuery] = useState("");
+  const [data, setData] = useState(product);
 
 
   const changeLang = (lang) => {
     i18n.changeLanguage(lang);
   }
+
 
   return (
 
@@ -153,18 +157,20 @@ const Headers = () => {
                               onChange={e => setQuery(e.target.value)}
 
                             />
-                            <Button id='nav-button' variant="outline-none border-0" ><i class="search-icon fa-solid fa-magnifying-glass"></i></Button>
+                            <Button id='nav-button1' variant="outline-none border-0" ><i class="search-icon fa-solid fa-magnifying-glass"></i></Button>
                           </Form>
-                          {product.filter(q => q.title.toLocaleLowerCase().includes(query)).map(item => {
+                         <div className="scroll-search">
+                         {query.length===0? "" : product.filter(q => q.title.toLocaleLowerCase().includes(query)).map(item => {
                             return <ListGroup className='mt-4'>
-                              <ListGroup.Item >
-                                <LinkContainer to='/products'>
-                                  <a className='text-dark text-decoration-none'>{item.title}</a>
+                                <LinkContainer to={`/productDetails/${item.id}`}>
+                                  <button className='text-dark btn btn-light d-flex justify-space-between align-items-center'>
+                                    <img src={item.img} alt="" style={{width:"100px", height:"100px", objectFit:"contain"}}/>
+                                    {item.title}</button>
+                                  
                                 </LinkContainer>
-                              </ListGroup.Item>
-
                             </ListGroup>
                           })}
+                         </div>
                         </div>
                         <div className="modal-footer">
                           <button type="button" className="btn btn-secondary fw-bolder" data-bs-dismiss="modal">
@@ -190,7 +196,7 @@ const Headers = () => {
                     </button>
                   </LinkContainer>
 
-                  <LinkContainer to="/basket">
+                  {/* <LinkContainer to="/basket"> */}
                   <button className="btn  shop-btn  ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" >
                     <ShoppingBagOutlinedIcon className='shop fs-3 ' />
                     <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
@@ -198,7 +204,7 @@ const Headers = () => {
                       <span className="visually-hidden">unread messages</span>
                     </span>
                   </button>
-                  </LinkContainer>
+                  {/* </LinkContainer> */}
 
                   <LinkContainer to="/my-account">
                     <AuthBtn />
@@ -253,9 +259,9 @@ const Headers = () => {
                     </div>
                   })}
                   <h4 className='fw-bolder'>Total Price: <span className='text-danger'>{cartTotal.toFixed()}</span>$</h4>
-                  {/* <LinkContainer to="/basket"> */}
+                  <LinkContainer to="/basket">
                     <Button variant='light rounded-pill btn-lg btn-outline-dark fw-bolder' >GO TO BASKET</Button>
-                  {/* </LinkContainer> */}
+                  </LinkContainer>
                 </Container>
               </div>
             </div>

@@ -12,12 +12,16 @@ import { useState, useEffect } from 'react';
 
 const ProductsPage = ({ menuItem }) => {
 
+
   const { t } = useTranslation();
   const { addItem } = useCart();
 
+  // const [datas, setDatas] = useState(data);
   const [product, setProduct] = useState(data);
-  const [prices, setPrices]=useState(data);
-
+  const [prices, setPrices] = useState(data);
+  const [search, setSearch]=useState('');
+  const [minPrice, setMinPrice] = useState(30);
+  const [maxPrice, setMaxPrice] = useState(600);
   const menuCategories = ["All", ...new Set(data.map(item => item.category))];
 
 
@@ -38,9 +42,37 @@ const ProductsPage = ({ menuItem }) => {
     filtercategories(categoryValue);
   }, [])
 
-   // PRICES SECTION 
+  // stock 
+  const filterstock = (stockStatus) => {
+    localStorage.setItem("Stock", stockStatus);
+  
+    if (stockStatus === "All") {
+      setProduct(data);
+      return;
+    }
+  
+    const filteredStock = data.filter((item) => {
+      if (stockStatus === "In stock") {
+        return item.stock > 0;
+      } else if (stockStatus === "Out of stock") {
+        return item.stock <= 0;
+      }
+      return true;
+    });
+  
+    setProduct(filteredStock);
+  };
+
+  // PRICES SECTION 
+ 
+  const filteredFunctions=()=>{
+       let filteredData=data.filter(item=>item.price>=minPrice && item.price<=maxPrice)
+        setProduct(filteredData)
+
+    }
 
 
+    
 
   const notify = () => toast.success('Product added to cart!', {
     position: "bottom-right",
@@ -62,17 +94,17 @@ const ProductsPage = ({ menuItem }) => {
           <Col sm={6} md={3} >
 
             <div className="search-section">
-            <Form className="d-flex shadow mb-5">
-                  <Form.Control
-                    type="search"
-                    placeholder={t("header.12")}
-                    className=" header-input"
-                    aria-label="Search"
-                    data-bs-target="#staticBackdrop"
-                    style={{borderRadius:"0px"}}
-                  />
-                  <Button id='nav-button' variant="outline-none border-0" style={{backgroundColor:"#000000", color:"white",borderRadius:"0px"}} ><i class="fa-solid fa-magnifying-glass"></i></Button>
-                </Form>
+              <Form className="d-flex shadow mb-5">
+                <Form.Control
+                  type="search"
+                  placeholder={t("header.12")}
+                  className=" header-input"
+                  aria-label="Search"
+                  data-bs-target="#staticBackdrop"
+                  style={{ borderRadius: "0px" }}
+                />
+                <Button id='nav-button' variant="outline-none border-0" style={{ backgroundColor: "#000000", color: "white", borderRadius: "0px" }} ><i class="fa-solid fa-magnifying-glass"></i></Button>
+              </Form>
             </div>
             <h6 style={{ fontWeight: "950" }}>CATEGORY</h6>
 
@@ -83,8 +115,23 @@ const ProductsPage = ({ menuItem }) => {
                     <i class="fa-solid fa-bars me-3 "></i>  PRICE
                   </button>
                 </h2>
-                <div id="flush-collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div className="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                <div id="flush-collapseOne" className="accordion-collapse collapse my-5" data-bs-parent="#accordionFlushExample">
+                <div className="col-lg-12">
+                        <h4>Filter by price</h4>
+                    <input
+                        type="range"
+                        className="form-range"
+                        id="customRange1"
+                        min={30}
+                        max={600}
+                        value={minPrice}
+                        onChange={(e) => setMinPrice(Number(e.target.value))}
+                    />
+              <p>
+                Price: <span>${minPrice} — ${maxPrice}</span>
+              </p>
+              <button className='btn btn-dark fw-bolder'  onClick={() => filteredFunctions("All")}>Filter</button>
+                </div>
                 </div>
               </div>
               <div className="accordion-item">
@@ -96,8 +143,8 @@ const ProductsPage = ({ menuItem }) => {
                 <div id="flush-collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                   <div className="accordion-body">
                     <ul className="list-group ">
-                      <button className='btn btn-lg fw-bold btn-outline-dark mb-3' style={{ borderRadius: "0px" }}>In stock</button>
-                      <button className='btn btn-lg fw-bold btn-outline-dark mb-3' style={{ borderRadius: "0px" }}>Out of stock</button>
+                      <button className='btn btn-lg fw-bold btn-outline-dark mb-3' style={{ borderRadius: "0px" }} onClick={() => filterstock("In stock")}>In stock</button>
+                      <button className='btn btn-lg fw-bold btn-outline-dark mb-3' style={{ borderRadius: "0px" }} onClick={() => filterstock("Out of stock")}>Out of stock</button>
 
                     </ul>
 
@@ -130,7 +177,9 @@ const ProductsPage = ({ menuItem }) => {
 
           <div className="col-md-9 mb-5" >
             <div className="row g-5">
+              
               {product.map((item) => {
+
 
                 return <div className=" col-md-4" key={item.id}>
                   <div className='main mb-5'>
@@ -163,6 +212,7 @@ const ProductsPage = ({ menuItem }) => {
                 </div>
               })
               }
+              
             </div>
           </div>
 

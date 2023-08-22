@@ -22,18 +22,18 @@ const Basket = () => {
         progress: undefined,
         theme: "light",
     });
-    const data = JSON.parse(localStorage.getItem("User"))
+    const data = JSON.parse(localStorage.getItem("Guest")) || JSON.parse(localStorage.getItem("Admin"))
 
-    // const checkUser = () => {
-    //     if (data !== null) {
-    //         setItems([])
-
-    //     }
-    //     else {
-    //         <Navigate to='/'/>
-    //         console.log('else bloku');
-    //     }
-    // }
+    const checkUser = () => {
+        if (data !== null) {
+            setItems([])
+        }
+        else {
+            <Navigate to='/' />
+            console.log('else bloku');
+            alert('Create an account!')
+        }
+    }
 
 
     return (
@@ -54,6 +54,7 @@ const Basket = () => {
                         to sync your bag across your devices.</p>
                 </div>
                 <div className="item fw-bold ms-3">ITEM</div>
+
                 {items.map((item, count) => {
                     return <div className="main-basket d-flex" >
 
@@ -110,17 +111,22 @@ const Basket = () => {
                                         <h5 className='fw-bold me-5 mt-3'>${cartTotal}</h5>
                                     </div>
                                 </div>
-                                <button className='btn text-white fw-bold mt-3' style={{ width: "100%", height: "60px", backgroundColor: "#000000" }}>CHECKOUT AS A GUEST</button>
-                                <button className='btn text-white fw-bold mt-3' style={{ width: "100%", height: "60px", backgroundColor: "#000000" }}>SIGN IN FOR FASTER CHECKOUT</button>
+                               <LinkContainer to="/register" style={{ width: "100%", height: "60px", backgroundColor: "#000000" }}>
+                               <button className='btn text-white fw-bold mt-3' style={{ width: "100%", height: "60px", backgroundColor: "#000000" }}>CHECKOUT AS A GUEST</button>
+                               </LinkContainer>
+                               <LinkContainer to="/login"  style={{ width: "100%", height: "60px", backgroundColor: "#000000" }}>
+                               <button className='btn text-white fw-bold mt-3' style={{ width: "100%", height: "60px", backgroundColor: "#000000" }}>SIGN IN FOR FASTER CHECKOUT</button>
+                               </LinkContainer>
                             </div>
                         </div>
 
                     </div>
                 })}
 
+
                 <h4 className='fw-bolder'>Total Price: <span className='text-danger me-1 d-flex'>${cartTotal.toFixed()}</span></h4>
                 <Button variant='dark' className='btn btn-lg btn-outline-light fw-bold' onClick={() => { emptyCart() }}>CLEAR CART</Button>
-                <Button variant='dark' className='btn btn-lg btn-outline-light fw-bold ms-3' > BUY NOW</Button>
+                <Button variant='dark' className='btn btn-lg btn-outline-light fw-bold ms-3' onClick={checkUser} > BUY NOW</Button>
 
                 <ToastContainer
                     position="bottom-right"
@@ -134,7 +140,7 @@ const Basket = () => {
                     pauseOnHover
                     theme="light"
                 />
-            </Container>
+            </Container >
     )
 }
 

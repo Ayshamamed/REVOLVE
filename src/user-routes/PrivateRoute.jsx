@@ -3,7 +3,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 
 const PrivateRoute = () => {
     const auth = () => {
-        const user = localStorage.getItem("User");
+        const user = localStorage.getItem("Admin");
         if (user) return true
         else return false
     };

@@ -1094,4 +1094,27 @@ body {
   display: flex;
   position: absolute;
   margin-left: 40px !important;
+}
+
+.a {
+  display: flex;
+  flex-direction: row !important;
+}
+
+.b {
+  display: flex;
+  flex-direction: row-reverse !important;
+}
+
+.login-container {
+  height: 190vh;
+}
+
+.signup-dropdown {
+  margin-left: -40px !important;
+}
+
+.scroll-search {
+  height: 300px !important;
+  overflow-y: scroll !important;
 }/*# sourceMappingURL=style.css.map */

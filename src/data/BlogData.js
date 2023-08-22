@@ -7,19 +7,23 @@ import img6 from "../images/blog/blog6.png";
 import img7 from "../images/blog/blog7.png";
 const blogData=[
     {
+      style:"a",
        id:1,
        img:img1,
        title:"Danielle's Current Skincare Products",
        desc:"Danielle has curated a collection of some of the best products out there to keep her skin radiant and protected in the summer! Linked below are her everyday go-to's. ",
        name:"by Aida Mammadova"
     },
-    {   id:2,
+    {  style:"b",
+       id:2,
         img:img2,
         title:"Summer Sundress Shopping Cart",
         desc:"Everyone knows that sundresses are a summer staple, so we've rounded up the best summery dresses that you can style from weekend brunches to office attire this summer. ",
         name:"By Aisha Mammadova"
      },
      {
+
+      style:"a",
         id:3,
         img:img3,
         title:"This Scandi Influencer’s Shoe Collaboration Is The Gift That Keeps On Giving",
@@ -27,6 +31,7 @@ const blogData=[
         name:"By Gunesh Mammadova"
      },
      {
+      style:"b",
       id:4,
       img:img4,
       title:"Elevated Basics",
@@ -34,6 +39,7 @@ const blogData=[
       name:"By Gunesh Mammadova"
    },
    {
+      style:"a",
       id:5,
       img:img5,
       title:"Outfits Of The Week",
@@ -41,6 +47,7 @@ const blogData=[
       name:"By Gunesh Mammadova"
    },
    {
+      style:"b",
       id:6,
       img:img6,
       title:"Summer Accessories Round-up: Mesh shoes and Raffia Tote Bags",
@@ -48,6 +55,7 @@ const blogData=[
       name:"By Gunesh Mammadova"
    },
    {
+      style:"a",
       id:7,
       img:img7,
       title:"Spring Night Out Looks",

@@ -10,7 +10,6 @@ import Wishlist from '../components/Wishlist';
 import AboutPage from '../ABOUT/AboutPage';
 import ContactUs from '../components/ContactUs';
 import SignUp from '../LOGIN/SignUp';
-import Bag from '../components/Bag';
 import PrivateRoute from '../user-routes/PrivateRoute';
 import Blog from '../pages/Blog';
 import ProductsPage from '../pages/ProductsPage';
@@ -21,6 +20,9 @@ import TopBtn from '../components/TopBtn';
 import ProductDetails from '../components/ProductDetails';
 import { ModeContext } from '../context/ModeContext';
 import AdminPanel from "../user-routes/AdminPanel";
+import Dashboard from "../user-routes/Dashboard";
+import AddBlog from '../user-routes/AddBlog';
+import EditBlog from '../user-routes/EditBlog';
 
 
 const App = () => {
@@ -53,14 +55,20 @@ const App = () => {
      <Route path='/wishlist' element={<Wishlist/>}></Route>
      <Route path='/about' element={<AboutPage/>}></Route>
      <Route path='/contact' element={<ContactUs/>}></Route>
-     <Route path='/bag' element={<Bag/>}></Route>
      <Route path='/blog' element={<Blog/>}></Route>
      <Route path='/products' element={<ProductsPage/>}></Route>
      <Route path='/productDetails/:id' element={<ProductDetails/>}></Route>
+     <Route path='*' element={<Home />}></Route>
+
      <Route element={<PrivateRoute/>}>
       <Route path="/admin" element={<AdminPanel/>}></Route>
+      <Route path="/dashboard" element={<Dashboard/>}></Route>
+      <Route path="/addBlog" element={<AddBlog/>}/>
+     <Route path="/editBlog/:id" element={<EditBlog/>}/>
+
      </Route>
    </Routes>
+   
     <Footer />
 
 

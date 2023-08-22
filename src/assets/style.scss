@@ -5,7 +5,6 @@
 @import "_SectionThree.scss";
 @import "_SectionTwo";
 @import "_AboutPage.scss";
-@import "_Login.scss";
 @import "_DarkLight.scss";
 @import "_CustomerSays";
 @import "_ContactUs.scss";
@@ -176,4 +175,26 @@
       
      }
   }
+}
+.a{
+  display: flex;
+  flex-direction: row !important;
+ 
+}
+.b{
+  display: flex;
+  flex-direction: row-reverse !important;
+
+
+}
+.login-container{
+  height: 190vh;
+}
+.signup-dropdown{
+  
+  margin-left: -40px !important;
+}
+.scroll-search{
+  height: 300px !important;
+  overflow-y: scroll !important;
 }
